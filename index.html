@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet | Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+        <a href="#accueil" class="logo">Le <span>Gourmet</span></a>
+
+        <button class="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+
+        <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#menu" class="btn">Commander</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="accueil">
+        <div class="container hero-content">
+            <p class="subtitle">BIENVENUE CHEZ LE GOURMET</p>
+
+            <h1>Le plaisir de bien manger, <span>à chaque bouchée.</span></h1>
+
+            <p>
+                Découvrez des plats délicieux, des ingrédients frais
+                et des saveurs exceptionnelles.
+            </p>
+
+            <a href="#menu" class="btn">Découvrir notre menu</a>
+        </div>
+    </section>
+
+    <section class="about section" id="apropos">
+        <div class="container">
+            <p class="subtitle">À PROPOS DE NOUS</p>
+            <h2>Une passion pour la <span>bonne cuisine</span></h2>
+
+            <p>
+                Chez Le Gourmet, nous proposons des spécialités marocaines
+                et internationales préparées avec passion.
+                Notre objectif est de vous offrir une expérience gourmande
+                et un service chaleureux.
+            </p>
+        </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+        <div class="container">
+            <p class="subtitle">NOTRE SÉLECTION</p>
+            <h2>Découvrez notre <span>menu</span></h2>
+
+            <input
+                type="search"
+                id="search-input"
+                placeholder="Rechercher un plat..."
+                aria-label="Rechercher un plat"
+            >
+
+            <div class="categories">
+                <button class="category-btn active" type="button">Tous</button>
+                <button class="category-btn" type="button">Marocain</button>
+                <button class="category-btn" type="button">Entrée</button>
+                <button class="category-btn" type="button">Pizza</button>
+                <button class="category-btn" type="button">Burger</button>
+                <button class="category-btn" type="button">Pâtes</button>
+                <button class="category-btn" type="button">Salade</button>
+                <button class="category-btn" type="button">Dessert</button>
+                <button class="category-btn" type="button">Boisson</button>
+            </div>
+
+            <div id="menu-container" class="menu-grid"></div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <h2>Le goût qui vous donne envie de revenir !</h2>
+            <a href="#menu" class="btn">Voir le menu</a>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container">
+            <p class="subtitle">CONTACTEZ-NOUS</p>
+            <h2>Nous sommes à votre <span>écoute</span></h2>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 Adresse</h3>
+                    <p>Ajoutez l'adresse de votre restaurant.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>📞 Téléphone</h3>
+                    <p>Ajoutez votre numéro de téléphone.</p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>🕒 Horaires</h3>
+                    <p>Tous les jours : 12h00 – 23h00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <a href="#accueil" class="logo">Le <span>Gourmet</span></a>
+        <p>Des saveurs authentiques à partager.</p>
+        <p>© <span id="current-year"></span> Le Gourmet. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
