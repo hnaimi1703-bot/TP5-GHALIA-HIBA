@@ -199,7 +199,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const categoryButtons = document.querySelectorAll(".category-btn");
 
     let categorieActive = "Tous";
-
+function normaliserTexte(texte) {
+    return texte
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
     // Afficher les plats
     function afficherPlats(liste) {
         menuContainer.innerHTML = "";
@@ -272,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Filtrer les plats
     function filtrerPlats() {
-        const recherche = searchInput.value.trim().toLowerCase();
+       const recherche = normaliserTexte(searchInput.value.trim());
 
         const resultats = plats.filter(function (plat) {
             const bonneCategorie =
@@ -284,8 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 plat.description + " " +
                 plat.categorie;
 
-            const correspondRecherche =
-                texte.toLowerCase().includes(recherche);
+        
 
             return bonneCategorie && correspondRecherche;
         });
