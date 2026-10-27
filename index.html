@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Le Gourmet | Restaurant - Recherche</title>
+<title>Le Gourmet | Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -69,6 +69,17 @@
                 placeholder="Rechercher un plat..."
                 aria-label="Rechercher un plat"
             >
+
+            <!-- Tri des plats par prix -->
+            <div class="tri-prix">
+                <label for="sort-prix">Trier les plats par prix :</label>
+
+                <select id="sort-prix">
+                    <option value="default">Ordre par défaut</option>
+                    <option value="asc">Prix croissant</option>
+                    <option value="desc">Prix décroissant</option>
+                </select>
+            </div>
 
             <div class="categories">
                 <button class="category-btn active" type="button">Tous</button>
