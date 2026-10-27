@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Liste des plats
@@ -37,13 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const sortPrix = document.getElementById("sort-prix");
 
     let categorieActive = "Tous";
-// Normaliser le texte pour faciliter la recherche
-function normaliserTexte(texte) {
-    return texte
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-}
+
+    // Normaliser le texte pour faciliter la recherche
+    function normaliserTexte(texte) {
+        return texte
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
+
     // Afficher les plats
     function afficherPlats(liste) {
         menuContainer.innerHTML = "";
@@ -115,11 +118,7 @@ function normaliserTexte(texte) {
 
     // Rechercher, filtrer et trier les plats
     function filtrerPlats() {
-<<<<<<< HEAD
-       const recherche = normaliserTexte(searchInput.value.trim());
-=======
         const recherche = normaliserTexte(searchInput.value.trim());
->>>>>>> origin/feature/tri-prix
 
         let resultats = plats.filter(function (plat) {
             const bonneCategorie =
@@ -132,11 +131,7 @@ function normaliserTexte(texte) {
                 plat.categorie
             );
 
-<<<<<<< HEAD
-        
-=======
             const correspondRecherche = texte.includes(recherche);
->>>>>>> origin/feature/tri-prix
 
             return bonneCategorie && correspondRecherche;
         });
@@ -170,7 +165,9 @@ function normaliserTexte(texte) {
     });
 
     // Recherche en temps réel
-    searchInput.addEventListener("input", filtrerPlats);
+    if (searchInput) {
+        searchInput.addEventListener("input", filtrerPlats);
+    }
 
     // Tri par prix
     if (sortPrix) {
@@ -230,3 +227,4 @@ function normaliserTexte(texte) {
     filtrerPlats();
 
 });
+
